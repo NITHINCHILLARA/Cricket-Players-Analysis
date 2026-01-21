@@ -1,3 +1,3 @@
 # Cricket-Players-Analysis
-###This Power BI dashboard offers a comprehensive analysis of cricket players' performances. It features detailed metrics like batting average, strike rate, boundary percentage, and bowling economy, enabling a deep dive into players' strengths and weaknesses. This dashboard serves as an essential tool for cricket analysts, enthusiasts, and team strategists to assess player capabilities and make informed decisions
-###The .pbix file contains the created Power BI report used in this project. The DAX measures file contains the measures created for this particular project.
+This Power BI dashboard offers a comprehensive analysis of cricket players' performances. It features detailed metrics like batting average, strike rate, boundary percentage, and bowling economy, enabling a deep dive into players' strengths and weaknesses. This dashboard serves as an essential tool for cricket analysts, enthusiasts, and team strategists to assess player capabilities and make informed decisions
+The .pbix file contains the created Power BI report used in this project. The DAX measures file contains the measures created for this particular project.
