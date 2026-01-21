@@ -1,0 +1,62 @@
+BATTING
+
+1)
+Average Balls Faced = AVERAGE(fact_batting_summary[balls])
+
+2)
+Total Runs = SUM(fact_batting_summary[runs])
+
+3)
+Total Innings Dismissed = SUM(fact_batting_summary[out])
+
+4)
+Total Innings Batted = COUNT(fact_batting_summary[match_id])
+
+5)
+total balls faced = SUM(fact_batting_summary[balls])
+
+6)
+Batting Avg = DIVIDE([Total Runs],[Total Innings Dismissed],0)
+
+7)
+Batting Position = ROUNDUP(AVERAGE(fact_batting_summary[battingPos]),0)
+
+8)
+Boundary % = DIVIDE(SUM(fact_batting_summary[boundary runs]),[Total Runs],0)
+
+BOWLING
+
+9)
+Balls Bowled = SUM(fact_bowling_summary[Balls])
+
+10)
+Runs Conceded = SUM(fact_bowling_summary[runs])
+
+11)
+wickets = SUM(fact_bowling_summary[wickets])
+
+12)
+Bowling Average = DIVIDE([Runs Conceded],[wickets],0)
+
+13)
+Bowling Strike Rate = DIVIDE([Balls Bowled], [wickets],0)
+
+14)
+Dot ball % = DIVIDE(SUM(fact_bowling_summary[zeros]), SUM(fact_bowling_summary[Balls]),0)
+
+15)
+Economy = DIVIDE( [Runs Conceded], ([Balls Bowled]/6),0)
+
+16)
+Total Innings Bowled = DISTINCTCOUNT(fact_bowling_summary[match_id])
+
+OTHERS 
+
+17)
+Player Selection = if(ISFILTERED(dim_players[name]),"1","0")
+
+18)
+Color Callout Value = if([Player Selection]="0", "#D0CF1D","#1D1D2E")
+
+19)
+Display Text = if([Player Selection] = "1","","Select Player(s) by clicking the player’s name to see their individual or combined strength.")
